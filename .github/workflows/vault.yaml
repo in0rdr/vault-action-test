@@ -21,6 +21,7 @@ jobs:
           method: jwt
           path: jwt-test
           role: test-role
+          jwtGithubAudience: in0rdr
           exportToken: true
           secrets: |
             /auth/token/lookup-self display_name | NAME
