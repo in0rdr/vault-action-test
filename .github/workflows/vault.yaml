@@ -8,6 +8,7 @@ env:
   VAULT_ADDR: https://az.in0rdr.ch:8200
 jobs:
   configure:
+    runs-on: ubuntu-latest
     steps:
       - name: Configure Vault Credentials
         uses: hashicorp/vault-action@v2.4.1
