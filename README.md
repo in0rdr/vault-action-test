@@ -29,7 +29,7 @@ vault write auth/jwt-test/role/test-role -<<EOF
   "ttl": "1h",
   "bound_claims": {
     "repository": "in0rdr/vault-action-test",
-    "job_workflow_ref": "in0rdr/vault-action-test/.github/workflows/vault.yml@refs/heads/main"
+    "job_workflow_ref": "in0rdr/vault-action-test/.github/workflows/vault.yml*"
   },
   "bound_audiences": "https://github.com/in0rdr"
 }
