@@ -1,0 +1,17 @@
+name: Configure Vault
+env:
+  VAULT_ADDR: https://az.in0rdr.ch:8200
+jobs:
+  configure:
+    steps:
+      - name: Configure Vault Credentials
+        uses: hashicorp/vault-action@v2.4.1
+        with:
+          url: ${{ env.VAULT_ADDR }}
+          tlsSkipVerify: true
+          method: jwt
+          path: jwt-test
+          role: test-role
+          exportToken: true
+          secrets: |
+            /auth/token/lookup-self display_name | NAME
