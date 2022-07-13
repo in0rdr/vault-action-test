@@ -8,6 +8,9 @@ env:
   VAULT_ADDR: https://az.in0rdr.ch:8200
 jobs:
   configure:
+    permissions:
+        contents: read
+        id-token: write
     runs-on: ubuntu-latest
     steps:
       - name: Configure Vault Credentials
