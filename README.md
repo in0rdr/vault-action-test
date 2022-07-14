@@ -30,7 +30,8 @@ vault write auth/jwt-test/role/test-role -<<EOF
   "role_type": "jwt",
   "policies": "test-role",
   "ttl": "1h",
-  "token_num_uses": 0,
+  "token_num_uses": "0",
+  "bound_claims_type": "glob",
   "bound_claims": {
     "repository": "in0rdr/vault-action-test",
     "job_workflow_ref": "in0rdr/vault-action-test/.github/workflows/vault.yml*"
